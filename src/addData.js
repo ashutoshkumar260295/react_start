@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-export default class DataPrint extends React.Component {
+export default class AddData extends React.Component {
 	render() {
 		return (
 			<div>

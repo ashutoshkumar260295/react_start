@@ -40,6 +40,7 @@ class App extends React.Component {
 						<DataPrint
 							todos={this.state.todos}
 							deletetask={this.deletetask.bind(this)}
+							editData={this.editData.bind(this)}
 						/>
 					</div>
 					<div className="PageRight">
@@ -47,6 +48,7 @@ class App extends React.Component {
 						<AddData addData={this.addData.bind(this)} />
 					</div>
 				</div>
+				<div className="pageBottom">Thanx</div>
 			</div>
 		);
 	}
@@ -63,6 +65,16 @@ class App extends React.Component {
 	addData(task) {
 		task._id = todos.length + 1;
 		todos.push(task);
+		this.setState({ todos: this.state.todos });
+	}
+	editData(task) {
+		for (var i = 0; i < todos.length; i++) {
+			if (todos[i]._id === task.id) {
+				todos[i].title = task.title;
+				todos[i].description = task.desc;
+				break;
+			}
+		}
 		this.setState({ todos: this.state.todos });
 	}
 }
