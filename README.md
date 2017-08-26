@@ -1,1 +1,2 @@
-My first react App
+##My first react App
+clone it and just run yarn start or npm start in cmd...
