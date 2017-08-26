@@ -44,7 +44,7 @@ class App extends React.Component {
 						/>
 					</div>
 					<div className="PageRight">
-						<h1>Add Data</h1>
+						<h1>Add Data1</h1>
 						<AddData addData={this.addData.bind(this)} />
 					</div>
 				</div>
